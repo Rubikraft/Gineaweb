@@ -1,0 +1,125 @@
+/* To do list
+- centrer verticalement texte du header (le strut ne sert à rien pour l'instant je crois)
+- donner une hauteur aux éléments des sous-menus du header
+- attribuer des largeurs personnelles à chaque élément du header
+*/
+
+/*** Reset CSS ***/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+/*** Header ***/
+
+header {
+	background-color: #f3f3f3;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	/*height: 10vh;*/
+	box-shadow: 0 3px 5px #666;
+}
+
+header li, .strut_header {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header li {
+	height: 8vh;
+	width: 6vw;
+	text-align: center;
+	border-right: 2px solid #c0c0c0;
+	/*line-height: 30px;*/
+}
+
+header ul ul li {
+	display: block;
+	vertical-align: initial;
+	height: initial;
+	width: 100%;
+	border-bottom: 2px solid #c0c0c0;
+	border-right: none;
+}
+
+header ul ul li:last-child {
+	border-bottom: none;
+}
+
+header ul ul {
+	position: relative;
+	left: -999em;
+	border: 3px solid grey;
+	border-radius: 5px;
+	background-color: #f3f3f3;
+}
+
+header a {
+	display: block;
+
+}
+
+header a:hover, header a:focus {
+	font-weight: bold;
+}
+
+header li:hover ul, header li:focus ul {
+	left: auto;
+}
+
+.strut_header {
+	height: 100%;
+}
+
+/*** Section ***/
+
+section {
+	background-color: green;
+	position: absolute;
+	top: 8vh;
+	left: 0;
+	/*height: 90vh;*/
+	width: 85vw;
+}
+
+.expandeur {
+	background-color: brown;
+	position: absolute;
+	/*background: url("") fixed no-repeat top left;*/
+	height: 1vh;
+	width: 1.5vw;
+}
+
+.expandeurHaut, .expandeurBas {
+	
+}
+
+.expandeurDroite, .expandeurGauche {
+	display: inline-block;
+	vertical-align: middle;
+	transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg); /* IE 9 */
+	-webkit-transform: rotate(-90deg); /* Opera, Chrome et Safari */
+}
+
+#expandeurHaut1 {
+	top: 0;
+}
+
+/*** Aside ***/
+
+aside {
+	background-color: blue;
+	position: absolute;
+	top: 8vh;
+	left: 85vw;
+	height: 92vh;
+	width: 15vw;
+}
